@@ -65,7 +65,7 @@ const authenticateAdminJwt = (req, res, next) => {
 };
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_CONNECT_URI, {
+mongoose.connect("mongodb+srv://mwankhade718:Computer338@cluster0.vakp6gp.mongodb.net/", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   dbName: 'quizApp',
