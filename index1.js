@@ -73,12 +73,6 @@ mongoose.connect("mongodb+srv://mwankhade718:Computer338@cluster0.vakp6gp.mongod
 
 app.post('/admin/signup', (req, res) => {
   const { username, password } = req.body;
-
-  // Check if username or password is empty
-  if (!username || !password || username===''|| password==='') {
-    return res.status(400).json({ message: 'Username and password are required' });
-  }
-
   function callback(admin) {
     if (admin) {
       res.status(403).json({ message: 'Admin already exists' });
@@ -90,8 +84,8 @@ app.post('/admin/signup', (req, res) => {
       const token = jwt.sign({ username, role: 'admin' }, SECRETADMIN, { expiresIn: '1h' });
       res.json({ message: 'Admin created successfully', token });
     }
-  }
 
+  }
   Admin.findOne({ username }).then(callback);
 });
 
