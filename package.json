@@ -1,6 +1,6 @@
 {
-  "script":{
-    "start":"node index1.js"
+  "script": {
+    "start": "node index1.js"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
@@ -8,6 +8,7 @@
     "express": "^4.18.2",
     "gridfs-stream": "^1.1.1",
     "jsonwebtoken": "^9.0.0",
+    "moment-timezone": "^0.5.44",
     "mongoose": "^7.3.1",
     "multer": "^1.4.5-lts.1"
   }
