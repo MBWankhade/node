@@ -73,11 +73,10 @@ const authenticateAdminJwt = (req, res, next) => {
 };
 
 // Connect to MongoDB
-mongoose.connect("mongodb+srv://mwankhade718:Computer338@cluster0.vakp6gp.mongodb.net/", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  dbName: 'quizApp',
-});
+// OObMhTfZ2aj1TyXV
+mongoose.connect(
+  "mongodb+srv://mwankhade718:OObMhTfZ2aj1TyXV@cluster0.qil8qjy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+);
 
 app.post('/admin/signup', (req, res) => {
   const { username, password } = req.body;
